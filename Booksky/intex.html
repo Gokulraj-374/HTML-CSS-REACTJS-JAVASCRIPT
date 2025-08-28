@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeSky</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/idd3brt.css" />
+</head>
+<body>
+  <div class="navbar">
+    <h1>LifeSky - My Story Journal</h1>
+    <button id="download-button">Download My Stories</button>
+    <button id="clear-all-button">Clear All Stories</button>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="🔍 Search stories by title or author...">
+    <select id="sort-select">
+      <option value="newest">Sort: Newest</option>
+      <option value="oldest">Sort: Oldest</option>
+      <option value="author">Sort: Author A-Z</option>
+    </select>
+    <label>
+      <input type="checkbox" id="favorites-only"> Show Favorites Only
+    </label>
+  </div>
+
+  <div class="container" id="story-list">
+    
+  </div>
+
+  <div class="popup-overlay" id="popup-overlay"></div>
+
+  <div class="popup-box" id="popup-box">
+    <h2>Share Your Story</h2>
+    <form id="story-form">
+      <input type="text" placeholder="Story Title" id="story-title-input" required />
+      <input type="text" placeholder="Author Name" id="author-name-input" />
+      <textarea placeholder="Describe your life incident..." id="description-input" required></textarea>
+      <button type="submit">Post</button>
+      <button type="button" id="cancel-popup">Cancel</button>
+    </form>
+  </div>
+  <button class="add-button" id="add-popup-button">+</button>
+
+  <div class="details-overlay" id="details-overlay"></div>
+  <div class="details-box" id="details-box">
+    <h2 id="details-title"></h2>
+    <h5 id="details-author"></h5>
+    <p id="details-description"></p>
+    <button id="close-details">Close</button>
+  </div>
+
+  <script src="story.js"></script>
+</body>
+</html>
